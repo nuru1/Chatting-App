@@ -1,0 +1,39 @@
+en
+translator not installed
+
+
+Fri Nov 24 07:43:35 2017
+PhotoRec 7.1-WIP, Data Recovery Utility, October 2017
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Windows 8 (9200)
+Compiler: GCC 4.9, MinGW 3.11
+ext2fs lib: none, ntfs lib: 10:0:0, ewf lib: 20140608, libjpeg: libjpeg-turbo-1.3.1
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\PhysicalDrive0)=500107862016
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\PhysicalDrive1)=1000170586112
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\C:)=131072000000
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\D:)=157286400000
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\E:)=159316443136
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\F:)=52323942400
+filewin32_getfilesize(\\.\G:) GetFileSize err Incorrect function.
+
+filewin32_setfilepointer(\\.\G:) SetFilePointer err Incorrect function.
+
+Warning: can't get size for \\.\G:
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\H:)=1000168488960
+Partition table type (auto): Intel
+Disk \\.\PhysicalDrive0 - 500 GB / 465 GiB (RO) - Hitachi HTS545050B9A300
+Geometry from i386 MBR: head=255 sector=63
+     No partition             0   0  1 60801  80 63  976773168 [Whole disk]
+ 1 * HPFS - NTFS              0  32 33    12 223 19     204800
+     NTFS, blocksize=4096, 104 MB / 100 MiB
+ 2 P HPFS - NTFS             12 223 20  6374  59 21  102195200
+     NTFS, blocksize=4096, 52 GB / 48 GiB
+ 3 P HPFS - NTFS           6374  59 22 22309 126 25  256000000
+     NTFS, blocksize=4096, 131 GB / 122 GiB
+ 4 E extended LBA         22309 126 26 60801  47 46  618369024
+ 5 L HPFS - NTFS          22309 158 58 41431 239 24  307200000
+     NTFS, blocksize=4096, 157 GB / 146 GiB
+   X extended             41431 239 25 60801  47 46  311166976
+ 6 L HPFS - NTFS          41432  16 57 60801  47 46  311164928 [New Volume]
+     NTFS, blocksize=4096, 159 GB / 148 GiB

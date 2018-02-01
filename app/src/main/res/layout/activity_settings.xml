@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asif.chat.SettingsActivity"
+    android:theme="@style/AlertDialog.AppCompat.Light"
+    android:background="@color/colorvioletDark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/picture"
+        android:id="@+id/circleImageView" />
+
+    <TextView
+        android:id="@+id/settings_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circleImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/name"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"/>
+
+
+    <TextView
+        android:id="@+id/settings_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/status"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/change_photo"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/change_status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Change photo"
+        android:backgroundTint="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+
+    <Button
+        android:id="@+id/change_status"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="Change status"
+        android:backgroundTint="@color/orange"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"/>
+</RelativeLayout>

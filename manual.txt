@@ -1,0 +1,69 @@
+http://adbdriver.com/documentation/how-to-install-adb-driver-on-windows-8-10-x64.html
+
+package com.example.location;
+
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+
+	static final int REQUEST_LOCATION = 1;
+    LocationManager locationManager;
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 10, new Listener());
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 10, new Listener());
+        Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+        if (location == null){
+        	location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        }
+        if (location != null){
+        	handleLatLng(location.getLatitude(), location.getLongitude());
+        }
+        Toast.makeText(getApplicationContext(),
+        	"Trying to obtain GPS coordinates. Make sure you have location services on.",
+        	Toast.LENGTH_SHORT).show();
+        return true;
+        
+	}
+    
+    private void handleLatLng(double latitude, double longitude){
+        Log.v("TAG", "(" + latitude + "," + longitude + ")");
+    }
+
+    private class Listener implements LocationListener {
+	    public void onLocationChanged(Location location) {
+	        double longitude = location.getLongitude();
+	        double latitude = location.getLatitude();
+	        handleLatLng(latitude, longitude);
+	    }
+
+	    public void onProviderDisabled(String provider){}
+	    public void onProviderEnabled(String provider){}
+	    public void onStatusChanged(String provider, int status, Bundle extras){}
+    }
+    
+}    
+
+    
+

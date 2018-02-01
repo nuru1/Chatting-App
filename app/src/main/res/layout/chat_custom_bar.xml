@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorvioletDark">
+
+    <TextView
+        android:id="@+id/custom_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="22dp"
+        tools:text="DisplayName" />
+
+    <TextView
+        android:id="@+id/custom_bar_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/custom_bar_title"
+        android:layout_below="@+id/custom_bar_title"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        tools:text="Last Seen" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/custom_bar_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/custom_bar_seen"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/picture" />
+</RelativeLayout>
